@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-# Useful Cheatsheet - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code
+* Useful Cheatsheet - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code
 
 ### Day 001: December 30, 2017
 
@@ -8,8 +8,9 @@
 
 **Thoughts:** I've been hearing about vue.js and wanted to have a play with it. I ran through the basics of how vue.js works, it feels similar to both react and angularjs. Almost a mix of both.
 
-**Link to work:** [Vue.js Intro Guide](https://vuejs.org/v2/guide/)
-[Example of Codepen.io] (https://codepen.io/jakerutter/pen/KZmyrq)
+**Resources Used:**  [Vue.js Intro Guide](https://vuejs.org/v2/guide/)
+
+**Link to Work:** [Example of Codepen.io] (https://codepen.io/jakerutter/pen/KZmyrq)
 
 
 ### Day 002: December 31, 2017
@@ -21,4 +22,18 @@
 `npm run dev` - Starts the webpack app for dev mode
 `npm run build` - Builds for production
 
-**Link to work:** [Vue.js 2 Quickstart Tutorial 2017](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
+**Resources Used:**  [Vue.js 2 Quickstart Tutorial 2017](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2)
+
+### Day 003: January 1, 2018
+
+**Today's Progress**: Setup CSS Grid
+
+**Thoughts:** I used the CLI to setup another app and this time, Im going to play around with CSS Grids. It's pretty simple to get it started and I'm amazed at how powerful it seems. Although, a bit worried about support for IE11<. I also setup SASS in the webpack config using the tutorial below, pretty simple!
+
+`npm run dev` - Starts the webpack app for dev mode
+`npm run build` - Builds for production
+
+**Resources Used:**
+* [Complete CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [Using SASS/SCSS in Vue.js](https://medium.com/@mahesh.ks/using-sass-scss-in-vue-js-2-d472af0facf9)
+* [Getting Started with CSS Grids](https://scotch.io/tutorials/getting-started-with-css-grid-layout)
