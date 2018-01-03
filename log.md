@@ -37,3 +37,17 @@
 * [Complete CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [Using SASS/SCSS in Vue.js](https://medium.com/@mahesh.ks/using-sass-scss-in-vue-js-2-d472af0facf9)
 * [Getting Started with CSS Grids](https://scotch.io/tutorials/getting-started-with-css-grid-layout)
+
+### Day 004: January 2, 2018
+
+**Today's Progress**: Continue working with CSS Grid
+
+**Thoughts:** I copied over the previous day 003 and started from their on building a UI. I want to build a simple web app for stashing your shows and setlists, so I thought a simple form with css grids would be a good start. I want to get more comfortable with the css grids. It's starting to click and I can see the power of them. I like where this is going though, although I think I need to do early morning coding instead of after work.
+
+`npm run dev` - Starts the webpack app for dev mode
+`npm run build` - Builds for production
+
+**Resources Used:**
+* [Complete CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [Using SASS/SCSS in Vue.js](https://medium.com/@mahesh.ks/using-sass-scss-in-vue-js-2-d472af0facf9)
+* [Getting Started with CSS Grids](https://scotch.io/tutorials/getting-started-with-css-grid-layout)

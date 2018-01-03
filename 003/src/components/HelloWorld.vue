@@ -1,7 +1,7 @@
 <template>
 <div class="container">
 <h1>{{ msg }}</h1>
-    <div class="game-board">
+    <div class="form">
 
       <div class="box">1</div>
       <div class="box">2</div>
@@ -35,7 +35,7 @@ export default {
 width:960px;
 margin:0 auto;
 }
-.game-board
+.form
 {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
