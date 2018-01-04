@@ -8,7 +8,7 @@
           <div id="content">
               <h1>Search the DB</h1>
               <form>
-                <input type="search" name="search" id="search">
+                <input type="search" v-model="search" name="search" id="search">
                 <a href="#" class="myButton" v-on:click="greet">Search</a>
               </form>
           </div>
@@ -35,17 +35,17 @@ export default {
   name: 'Form',
   data () {
     return {
-      msg: 'Lookup Form'
+      search: ''
     }
   },
   methods: {
     greet: function (event) {
       // `this` inside methods points to the Vue instance
-      alert('Hello ' + this.name + '!')
+      alert('You searched for ' + this.search + '!')
       // `event` is the native DOM event
-      if (event) {
-        alert(event.target.tagName)
-      }
+      // if (event) {
+      //   alert(event.target.tagName)
+      // }
     }
   }
 }

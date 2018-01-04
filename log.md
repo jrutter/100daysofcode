@@ -51,3 +51,17 @@
 * [Complete CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [Using SASS/SCSS in Vue.js](https://medium.com/@mahesh.ks/using-sass-scss-in-vue-js-2-d472af0facf9)
 * [Getting Started with CSS Grids](https://scotch.io/tutorials/getting-started-with-css-grid-layout)
+
+### Day 005: January 3, 2018
+
+**Today's Progress**: Added Event Handler in Vuejs
+
+**Thoughts:** I'm getting into a groove now, but I definitely have to try get this done in the morning instead of the evening. I'm getting home too late and it's cutting into my me time.
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [Vuejs Event Guide](https://vuejs.org/v2/guide/events.html)
+* [Vue Syntax Highlighting](https://atom.io/packages/language-vue)
+* [Vue Input Forms](https://vuejs.org/v2/guide/forms.html)
