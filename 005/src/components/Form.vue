@@ -9,7 +9,7 @@
               <h1>Search the DB</h1>
               <form>
                 <input type="search" v-model="search" name="search" id="search">
-                <a href="#" class="myButton" v-on:click="greet">Search</a>
+                <a href="#" class="myButton" v-on:click="getSetlist()">Search</a>
               </form>
           </div>
       </div>
@@ -39,14 +39,22 @@ export default {
     }
   },
   methods: {
-    greet: function (event) {
+    getSetlist: function (event) {
       // `this` inside methods points to the Vue instance
-      alert('You searched for ' + this.search + '!')
+      // alert('You searched for ' + this.search + '!')
       // `event` is the native DOM event
       // if (event) {
       //   alert(event.target.tagName)
       // }
-    }
+      this.$http
+          .get('http://localhost:3001/api/random-quote', (data) => {
+            this.quote = data;
+          })
+          .error((err) => console.log(err))
+      }
+
+    },
+
   }
 }
 </script>

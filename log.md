@@ -65,3 +65,17 @@
 * [Vuejs Event Guide](https://vuejs.org/v2/guide/events.html)
 * [Vue Syntax Highlighting](https://atom.io/packages/language-vue)
 * [Vue Input Forms](https://vuejs.org/v2/guide/forms.html)
+
+### Day 005: January 4, 2018
+
+**Today's Progress**: Having fun with Airtable and Vuejs
+
+**Thoughts:** Up in the morning today, it's a snow blizzard outside, so doing a little coding before I start my day of work from home. I've decided to pivot and instead of building an app to track setlists, etc. I found this new product called Airtable.com and am going to build a daily status app. I was able to setup a basic table and use vue.js to bring in the statuses. There is more work I need to do on this, but pretty excited.
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [Cool Resource for creating fake data](http://jsonplaceholder.typicode.com/)
+* [Airtable](https://airtable.com)
+* [Working with Vue.js and Airtable](https://medium.com/row-and-table/an-basic-intro-to-the-airtable-api-9ef978bb0729)
