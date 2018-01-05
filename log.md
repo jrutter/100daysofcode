@@ -66,7 +66,7 @@
 * [Vue Syntax Highlighting](https://atom.io/packages/language-vue)
 * [Vue Input Forms](https://vuejs.org/v2/guide/forms.html)
 
-### Day 005: January 4, 2018
+### Day 006: January 4, 2018
 
 **Today's Progress**: Having fun with Airtable and Vuejs
 
@@ -79,3 +79,16 @@
 * [Cool Resource for creating fake data](http://jsonplaceholder.typicode.com/)
 * [Airtable](https://airtable.com)
 * [Working with Vue.js and Airtable](https://medium.com/row-and-table/an-basic-intro-to-the-airtable-api-9ef978bb0729)
+
+### Day 007: January 5, 2018
+
+**Today's Progress**: Moving onto MongoDB Stitch
+
+**Thoughts:** Up in the morning early again, yesterday was a snow blizzard and today it's -15 wind chill. Getting a bit of code in before I have to shovel! Did some more research last night and found that although Airtable is pretty sweet, it has it's limitations and is not meant for Production Customer Facing Web Applications. Found something called MongoDB Stitch, going to try setting the app up in that. It has a lot of nice features including authentication built in and a nice query language. I spent most of the time today learning about that and setup the NPM module and connected it to my app. Tomorrow I will spend more time setting up the basic CRUD operations
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
+* [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
