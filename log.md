@@ -105,3 +105,5 @@
 **Resources Used:**
 * [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
 * [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
+* [Vue JS Login Modal](https://lukevers.com/2015/08/17/crafting-a-login-modal-with-vuejs)
+* [Getting started with a ToDo App](https://docs.mongodb.com/stitch/getting-started/todo-web/)
