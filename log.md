@@ -92,3 +92,16 @@
 **Resources Used:**
 * [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
 * [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
+
+
+### Day 008: January 6
+**Today's Progress**: Setup Basic form with Stitch to add statuses
+
+**Thoughts:** I made a ton of progress today, I was able to get MongoDB stitch up and running with my app. I really like how easy it was to add a database, I created a form to enter your daily status and a log page to see all of the statuses. Tomorrow, I need to figure out how to clean up some of the collection and only show the latest statuses. Lots to do, but excited!!
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
+* [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)

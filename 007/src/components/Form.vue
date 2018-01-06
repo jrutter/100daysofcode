@@ -40,6 +40,9 @@ export default {
       searchResults: ''
     }
   },
+  saveStatus: function(event) {
+    console.log('event', event)
+  },
   mounted: function () {
     this.loadItems()
   },

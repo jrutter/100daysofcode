@@ -4,20 +4,29 @@
     <a href="#">Status Stash</a>
 </header>
 
+<ul class="nav">
+  <li><a href="/#/">Add your stash</a></li>
+  <li><a href="/#/log">Stash Log</a></li>
+  <li><a href="/#/stitch">Sign up to Stash</a></li>
+</ul>
+
       <div class="container">
           <div id="content">
-              <h1>Add your status</h1>
+              <h1>Status Log</h1>
+
+              <ul>
+                <li v-for="item in entries">
+                    <h3>{{item.email}}</h3>
+                    <p>Today: {{item.today}}</p>
+                    <p>Yesterday: {{item.yesterday}}</p>
+                    <p>Blocker: {{item.blocker}}</p>
+                </li>
+            </ul>
 
 
           </div>
       </div>
 
-      <footer>
-        <ul>
-          <li><a href="/#/">Home</a></li>
-          <li><a href="/#/stitch">Stitch</a></li>
-        </ul>
-      </footer>
 </div>
 </template>
 
@@ -27,7 +36,7 @@ export default {
   name: 'Stitch',
   data () {
     return {
-      items: [],
+      entries: [],
       searchResults: ''
     }
   },
@@ -36,12 +45,24 @@ export default {
   },
   methods: {
     loadItems: function () {
+      var self = this
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
 
       stitchClient.login()
       .then(() => console.log('logged in as: ' + stitchClient.authedId()))
       .catch(e => console.log('error: ', e))
+
+      let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
+      let items = db.collection('standup')
+      console.log('items', items)
+      // items.insertOne({ text: 'test', owner_id: stitchClient.authedId() }).then(() => {
+      //
+      // })
+      items.find(null, null).execute().then(function (data) {
+        console.log('data', data)
+        self.entries = data
+      })
     }
   }
 }
