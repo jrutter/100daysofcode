@@ -107,3 +107,16 @@
 * [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
 * [Vue JS Login Modal](https://lukevers.com/2015/08/17/crafting-a-login-modal-with-vuejs)
 * [Getting started with a ToDo App](https://docs.mongodb.com/stitch/getting-started/todo-web/)
+
+### Day 009: January 7
+**Today's Progress**: Added a Register View and cleaned up CSS
+
+**Thoughts:** I'm starting to build out the different views in the application, I added a Register view today and cleaned up some of the css. I would like to add the Auth next, I want to figure out how to delete records on MongoDB stitch. There seems to be no way to do it using an online console. I need to figure out if they have a shell.
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
+* [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
+* [MongoDB Stitch Intro](https://www.slideshare.net/mongodb/mongodb-stitch-introduction)

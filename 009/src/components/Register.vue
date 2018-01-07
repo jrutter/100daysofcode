@@ -12,16 +12,32 @@
 
       <div class="container">
           <div id="content">
-              <h1>Status Log</h1>
 
-              <ul>
-                <li v-for="item in entries">
-                    <h3>{{item.email}}</h3>
-                    <p>Today: {{item.today}}</p>
-                    <p>Yesterday: {{item.yesterday}}</p>
-                    <p>Blocker: {{item.blocker}}</p>
-                </li>
-            </ul>
+            <h1>Sign up for an account</h1>
+
+            <form>
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="My name is" v-model="name" id="name">
+                {{name}}
+              </div>
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="My e-mail is" v-model="email" id="email" required>
+                {{email}}
+              </div>
+
+              <div class="password">
+                <label for="password"></label>
+                <input type="password" placeholder="My password is" v-model="password" id="password" required>
+                {{email}}
+              </div>
+
+              <div class="submit">
+                <input type="submit" value="Register" id="form_button" v-on:click="saveStatus(event)"/>
+              </div>
+
+            </form><!-- // End form -->
 
 
           </div>
