@@ -120,3 +120,15 @@
 * [MongoDB Stitch NPM](https://www.npmjs.com/package/mongodb-stitch)
 * [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
 * [MongoDB Stitch Intro](https://www.slideshare.net/mongodb/mongodb-stitch-introduction)
+
+### Day 010: January 8
+**Today's Progress**: Learning more about vue.js router and components
+
+**Thoughts:** I'd like to move the updating of the nav from every file, to one common file that gets pulled in. I should be able to do this by pulling the array from the routes file and looping through it. Going to give it a shot, I got up early this morning to work on this. I think this is the key time to do this type of thing.
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [VueJS Component Templates](https://vuejsdevelopers.com/2017/03/24/vue-js-component-templates/)
+* [MongoDB Stitch Intro](https://www.slideshare.net/mongodb/mongodb-stitch-introduction)

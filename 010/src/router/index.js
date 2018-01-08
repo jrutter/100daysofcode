@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Form from '@/components/Form'
 import Stitch from '@/components/Stitch'
 import Register from '@/components/Register'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -19,9 +20,14 @@ export default new Router({
       component: Stitch
     },
     {
-      path: '/register',
+      path: '/user/register',
       name: 'Register',
       component: Register
+    },
+    {
+      path: '/user/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })
