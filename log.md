@@ -136,7 +136,7 @@
 ### Day 011: January 9
 **Today's Progress**: Setup a Single File Based Component
 
-**Thoughts:** It took me a day to figure out, but I was able to setup a single file based import using vuejs. Took me a while, but I figured it out. I think I was using  a reserved word for the import name. I have successfully split apart the navigation into it's own include, tomorrow I will work on making it dynamic. I also got up at 6am today, that makes a difference!
+**Thoughts:** It took me a day to figure out, but I was able to setup a single file based import using vuejs. Took me a while, but I figured it out. I think I was using  a reserved word for the import name. I have successfully split apart the navigation into it's own include, tomorrow I will work on making it dynamic. I also got up at 6am today, that makes a difference! Twitter: 1475 followers
 
 * `npm run dev` - Starts the webpack app for dev mode
 * `npm run build` - Builds for production
