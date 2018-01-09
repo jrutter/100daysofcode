@@ -5,15 +5,7 @@
       <a href="#">Status Stash</a>
   </header>
 
-
-  <ul class="nav">
-    <li><a href="/#/">Add your stash</a></li>
-    <li><a href="/#/log">Stash Log</a></li>
-    <li><a href="/#/user/register">Sign up to Stash</a></li>
-    <li><a href="/#/user/login">Log-in to Stash</a></li>
-  </ul>
-
-  <nav></nav>
+  <nav-bar></nav-bar>
 
 
       <div class="container">
@@ -56,11 +48,15 @@
 </template>
 
 <script>
+
 import { StitchClient } from 'mongodb-stitch'
-import Nav from '@/components/Nav'
+import NavBar from '@/components/Nav'
 
 export default {
   name: 'Form',
+  components: {
+    NavBar
+  },
   data () {
     return {
       items: [],

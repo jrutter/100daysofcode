@@ -1,17 +1,20 @@
 <template>
-  <div class="checkbox-wrapper">
-    <div>test</div>
-    <div class="title"></div>
+  <div class="nav-wrapper">
+    <ul class="nav">
+      <li><a href="/#/">Add your stash</a></li>
+      <li><a href="/#/log">Stash Log</a></li>
+      <li><a href="/#/user/register">Sign up to Stash</a></li>
+      <li><a href="/#/user/login">Log-in to Stash</a></li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    data () {
-      return { checked: false, title: 'Check me' }
-    },
-    methods: {
-      check () { this.checked = !this.checked }
-    }
+    name: 'NavBar',
   }
 </script>
+
+<style lang="scss" scoped>
+   @import '../sass/main.scss'
+</style>
