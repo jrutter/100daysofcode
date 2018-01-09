@@ -132,3 +132,14 @@
 **Resources Used:**
 * [VueJS Component Templates](https://vuejsdevelopers.com/2017/03/24/vue-js-component-templates/)
 * [MongoDB Stitch Intro](https://www.slideshare.net/mongodb/mongodb-stitch-introduction)
+
+### Day 011: January 9
+**Today's Progress**: Setup a Single File Based Component
+
+**Thoughts:** It took me a day to figure out, but I was able to setup a single file based import using vuejs. Took me a while, but I figured it out. I think I was using  a reserved word for the import name. I have successfully split apart the navigation into it's own include, tomorrow I will work on making it dynamic. I also got up at 6am today, that makes a difference!
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [VueJS Component Templates](https://jeremenichelli.io/2016/06/building-component-based-app-vue/)
