@@ -1,7 +1,7 @@
 # I've joined the #100DaysOfCode Challenge as of December 30, 2017
 
 ## Projects
-* Day001 - Current : ToDo App using Vue.js
+* Day001 - Current : Standup Stash App using Vue.js, MongoDB, CSS Grids
 
 ## Contents
 * [Rules](rules.md)
