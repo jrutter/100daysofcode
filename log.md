@@ -143,3 +143,14 @@
 
 **Resources Used:**
 * [VueJS Component Templates](https://jeremenichelli.io/2016/06/building-component-based-app-vue/)
+
+### Day 011: January 10
+**Today's Progress**: Making Navigation Dynamic Continued
+
+**Thoughts:** Got up early today, it was tough getting up, but glad I did it. I was able to move the routes into a named array, then can pull that array into the Navigation view. This makes it one less thing to update if the links/paths change. Twitter: 1475 followers
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [VueJS Component Templates](https://jeremenichelli.io/2016/06/building-component-based-app-vue/)

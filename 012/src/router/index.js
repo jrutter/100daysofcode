@@ -4,11 +4,10 @@ import Form from '@/components/Form'
 import Stitch from '@/components/Stitch'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Nav from '@/components/Nav'
 
 Vue.use(Router)
 
-export default new Router({
+export const routesArray = {
   routes: [
     {
       path: '/',
@@ -31,4 +30,5 @@ export default new Router({
       component: Login
     }
   ]
-})
+}
+export default new Router(routesArray)
