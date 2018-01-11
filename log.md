@@ -154,3 +154,15 @@
 
 **Resources Used:**
 * [VueJS Component Templates](https://jeremenichelli.io/2016/06/building-component-based-app-vue/)
+
+### Day 012: January 11
+**Today's Progress**: Finished Making Navigation Dynamic
+
+**Thoughts:** I got up early again today, it helped because I went to bed at 9:45pm. I finished the dynamic navigation, going to work on a medium post for this one as I couldn't find anyone doing anything like it. It took 3 days, but I did it with some help from stackoverflow. Now I can move onto other things. Twitter: 1474 followers
+
+* `npm run dev` - Starts the webpack app for dev mode
+* `npm run build` - Builds for production
+
+**Resources Used:**
+* [StackOverflow Question](https://stackoverflow.com/questions/48206254/can-i-use-vuejs-router-routes-array-to-dynamically-create-a-nav)
+* [Vue Router Docs](https://router.vuejs.org/en/)

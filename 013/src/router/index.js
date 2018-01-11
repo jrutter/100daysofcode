@@ -11,12 +11,12 @@ export const routesArray = {
   routes: [
     {
       path: '/',
-      name: 'Form',
+      name: 'Add Stash',
       component: Form
     },
     {
       path: '/log',
-      name: 'Stitch',
+      name: 'Stash Log',
       component: Stitch
     },
     {
@@ -26,7 +26,7 @@ export const routesArray = {
     },
     {
       path: '/user/login',
-      name: 'Login',
+      name: 'Log in',
       component: Login
     }
   ]

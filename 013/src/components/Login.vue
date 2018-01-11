@@ -1,44 +1,34 @@
 <template>
 <div>
+<header>
+    <a href="#">Status Stash</a>
+</header>
 
-  <header>
-      <a href="#">Status Stash</a>
-  </header>
-
-  <nav-bar></nav-bar>
+<nav-bar></nav-bar>
 
       <div class="container">
           <div id="content">
-              <h1>What's the current status?</h1>
 
-              <form>
-                <div class="name">
-                  <label for="name_input"></label>
-                  <input type="text" placeholder="My name is" v-model="name" id="name_input">
-                  {{name}}
-                </div>
-                <div class="email">
-                  <label for="email"></label>
-                  <input type="email" placeholder="My e-mail is" v-model="email" id="email_input" required>
-                  {{email}}
-                </div>
+            <h1>Log in to your account</h1>
 
-                <div class="message">
-                  <label for="today"></label>
-                  <textarea v-model="today" placeholder="What did you do yesterday?" id="today" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="message">
-                  <label for="yesterday"></label>
-                  <textarea v-model="yesterday" placeholder="What are you planning on doing today?" id="yesterday" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="message">
-                  <label for="blocker"></label>
-                  <textarea v-model="blocker" placeholder="Do you have any blockers?" id="blocker" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="submit">
-                  <input type="submit" value="Save Status" id="form_button" v-on:click="saveStatus(event)"/>
-                </div>
-              </form><!-- // End form -->
+            <form>
+
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="My e-mail is" v-model="email" id="email" required>
+              </div>
+
+              <div class="password">
+                <label for="password"></label>
+                <input type="password" placeholder="My password is" v-model="password" id="password" required>
+              </div>
+
+              <div class="submit">
+                <input type="submit" value="Log in" id="form_button" v-on:click="saveStatus(event)"/>
+              </div>
+
+            </form><!-- // End form -->
+
 
           </div>
       </div>
@@ -50,41 +40,38 @@
 import { StitchClient } from 'mongodb-stitch'
 import NavBar from '@/components/Nav'
 export default {
-  name: 'Login',
+  name: 'Stitch',
   components: {
     NavBar
   },
   data () {
     return {
-      items: [],
-      searchResults: '',
-      name: '',
-      email: '',
-      blocker: '',
-      today: '',
-      yesterday: ''
+      entries: [],
+      searchResults: ''
     }
   },
+  mounted: function () {
+    this.loadItems()
+  },
   methods: {
-    saveStatus: function (event) {
-      // event.preventDefault()
+    loadItems: function () {
       var self = this
-
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
+
+      stitchClient.login()
+      .then(() => console.log('logged in as: ' + stitchClient.authedId()))
+      .catch(e => console.log('error: ', e))
 
       let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
       let items = db.collection('standup')
       console.log('items', items)
-      items.insertOne({
-        name: self.name,
-        email: self.email,
-        today: self.today,
-        yesterday: self.yesterday,
-        blocker: self.blocker,
-        owner_id: stitchClient.authedId()
-      }).then(() => {
-
+      // items.insertOne({ text: 'test', owner_id: stitchClient.authedId() }).then(() => {
+      //
+      // })
+      items.find(null, null).execute().then(function (data) {
+        console.log('data', data)
+        self.entries = data
       })
     }
   }

@@ -7,9 +7,9 @@
       <li><a href="/#/user/login">Log-in to Stash</a></li>
     </ul>
 
-    <ul>
+    <ul class="nav">
       <li v-for="item in routes">
-          <h3>{{item.path}}</h3>
+          <router-link :to="item.path">{{item.name}}</router-link>
       </li>
   </ul>
   </div>
