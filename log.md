@@ -166,3 +166,11 @@
 **Resources Used:**
 * [StackOverflow Question](https://stackoverflow.com/questions/48206254/can-i-use-vuejs-router-routes-array-to-dynamically-create-a-nav)
 * [Vue Router Docs](https://router.vuejs.org/en/)
+
+### Day 013: January 12
+**Today's Progress**: Cleaned up Navigation, Added Font-awesome, Logged into DB via Shell
+
+**Thoughts:** Up at 6:00am today, will be tired tonight - but it's worth it for a little coding. Making some good progress now, finished up the navigation. I added font-awesome and was able to finally log into the DB shell to clean up the records. I will start the authentication module next, that should be fun!
+
+**Resources Used:**
+* None today

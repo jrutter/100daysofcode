@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Form from '@/components/Form'
-import Stitch from '@/components/Stitch'
+import Add from '@/components/Add'
+import List from '@/components/List'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 
@@ -12,12 +12,12 @@ export const routesArray = {
     {
       path: '/',
       name: 'Add Stash',
-      component: Form
+      component: Add
     },
     {
       path: '/log',
       name: 'Stash Log',
-      component: Stitch
+      component: List
     },
     {
       path: '/user/register',

@@ -10,18 +10,16 @@
 
       <div class="container">
           <div id="content">
-              <h1>What's the current status?</h1>
+              <h1>What's your current status?</h1>
 
               <form>
                 <div class="name">
                   <label for="name_input"></label>
                   <input type="text" placeholder="My name is" v-model="name" id="name_input">
-                  {{name}}
                 </div>
                 <div class="email">
                   <label for="email"></label>
                   <input type="email" placeholder="My e-mail is" v-model="email" id="email_input" required>
-                  {{email}}
                 </div>
 
                 <div class="message">
@@ -53,7 +51,7 @@ import { StitchClient } from 'mongodb-stitch'
 import NavBar from '@/components/Nav'
 
 export default {
-  name: 'Form',
+  name: 'Add',
   components: {
     NavBar
   },
@@ -86,8 +84,8 @@ export default {
         yesterday: self.yesterday,
         blocker: self.blocker,
         owner_id: stitchClient.authedId()
-      }).then(() => {
-
+      }).then((data) => {
+        console.log('data', data)
       })
     }
   }

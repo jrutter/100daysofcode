@@ -12,7 +12,6 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background:red;
   margin:0;
   color:white;
   display:grid;
@@ -66,7 +65,7 @@ ul {
 }
 ul li {
     padding: 1em;
-    color:#E98A8A;
+    color:#333;
 }
 ul li span {
     display:block;

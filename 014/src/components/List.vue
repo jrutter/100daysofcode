@@ -13,9 +13,9 @@
               <ul>
                 <li v-for="item in entries">
                     <h3>{{item.email}}</h3>
-                    <p>Today: {{item.today}}</p>
-                    <p>Yesterday: {{item.yesterday}}</p>
-                    <p>Blocker: {{item.blocker}}</p>
+                    <p><i class="fas fa-calendar-plus"></i> Today: {{item.today}}</p>
+                    <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday}}</p>
+                    <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
                 </li>
             </ul>
 
@@ -30,7 +30,7 @@
 import { StitchClient } from 'mongodb-stitch'
 import NavBar from '@/components/Nav'
 export default {
-  name: 'Stitch',
+  name: 'List',
   components: {
     NavBar
   },
@@ -55,11 +55,7 @@ export default {
 
       let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
       let items = db.collection('standup')
-      console.log('items', items)
-      // items.insertOne({ text: 'test', owner_id: stitchClient.authedId() }).then(() => {
-      //
-      // })
-      items.find(null, null).execute().then(function (data) {
+      items.find({ email: 'jake@onerutter.com' }).execute().then(function (data) {
         console.log('data', data)
         self.entries = data
       })
