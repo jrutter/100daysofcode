@@ -182,6 +182,8 @@ Twitter: 1476 followers +1
 
 **Thoughts:** Up at 6:00am today, started working on email/password authentication through Mongodb stitch. I'm setting up 2 new views for forgot password and email verification. I like how the Stitch service handles registration. I have managed to setup the email / password form and have received a verification email. I just need to wire it back to stitch now.
 
+Great progress today! I was able to get the email/password signup page done, was sent an email with a confirmation link, then setup the confirmation page. Just need to figure out where the user is getting stored as I don't see it on the table in Stitch. Otherwise, great work Jake!!
+
 Twitter: 1477 followers +1
 
 **Resources Used:**
