@@ -11,7 +11,7 @@
 
             <h1>Log in to your account</h1>
 
-            <form>
+            {{message}}
 
               <div class="email">
                 <label for="email"></label>
@@ -24,10 +24,9 @@
               </div>
 
               <div class="submit">
-                <input type="submit" value="Log in" id="form_button" v-on:click="saveStatus(event)"/>
+                <input type="submit" value="Log in" id="form_button" v-on:click="login(event)"/>
               </div>
 
-            </form><!-- // End form -->
 
 
           </div>
@@ -46,37 +45,30 @@ export default {
   },
   data () {
     return {
-      entries: [],
-      searchResults: ''
+      email: '',
+      password: '',
+      message: ''
     }
   },
-  mounted: function () {
-    this.loadItems()
-  },
   methods: {
-    loadItems: function () {
+    login: function () {
       var self = this
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
 
-      stitchClient.login()
-      .then(() => console.log('logged in as: ' + stitchClient.authedId()))
-      .catch(e => console.log('error: ', e))
-
-      let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
-      let items = db.collection('standup')
-      console.log('items', items)
-      // items.insertOne({ text: 'test', owner_id: stitchClient.authedId() }).then(() => {
-      //
-      // })
-      items.find(null, null).execute().then(function (data) {
-        console.log('data', data)
-        self.entries = data
+      stitchClient.login(self.email, self.password)
+      .then(userId => {
+        self.message = 'Successfully logged in as user'
+        console.log('Successfully logged in as user', userId)
+      })
+      .catch(err => {
+        self.message = 'Error logging in with email/password auth'
+        console.log('Error logging in with email/password auth:', err)
       })
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-   @import '../sass/main.scss'
+   @import '../../sass/main.scss'
 </style>

@@ -42,6 +42,7 @@ header {
     a {
       color:#333;
     }
+
 }
 
 .container {
@@ -169,6 +170,12 @@ ul.nav {
       font-size: 1em;
       color:#333;
     }
+    a.inactive {
+      display: none;
+    }
+  }
+  li.inactive {
+    display: none;
   }
 }
 

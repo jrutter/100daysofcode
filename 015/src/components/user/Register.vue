@@ -11,7 +11,8 @@
 
             <h1>Sign up for an account</h1>
 
-            <form>
+            {{message}}
+
               <div class="name">
                 <label for="name"></label>
                 <input type="text" placeholder="My name is" v-model="name" id="name">
@@ -30,10 +31,9 @@
               </div>
 
               <div class="submit">
-                <input type="submit" value="Register" id="form_button" v-on:click="saveStatus(event)"/>
+                <input type="submit" value="Register" id="form_button" v-on:click="createUser(event)"/>
               </div>
 
-            </form><!-- // End form -->
 
 
           </div>
@@ -53,36 +53,34 @@ export default {
   data () {
     return {
       entries: [],
-      searchResults: ''
+      name: '',
+      email: '',
+      password: '',
+      message: ''
     }
   },
-  mounted: function () {
-    this.loadItems()
-  },
   methods: {
-    loadItems: function () {
+    createUser: function (event) {
       var self = this
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
 
-      stitchClient.login()
-      .then(() => console.log('logged in as: ' + stitchClient.authedId()))
-      .catch(e => console.log('error: ', e))
+      // stitchClient.login()
+      // .then(() => console.log('logged in as: ' + stitchClient.authedId()))
+      // .catch(e => console.log('error: ', e))
 
-      let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
-      let items = db.collection('standup')
-      console.log('items', items)
-      // items.insertOne({ text: 'test', owner_id: stitchClient.authedId() }).then(() => {
-      //
-      // })
-      items.find(null, null).execute().then(function (data) {
-        console.log('data', data)
-        self.entries = data
-      })
+      stitchClient.register(self.email, self.password)
+        .then(() => {
+          self.message = 'Successfully sent account confirmation email!'
+            /* code to direct user to check their email */
+        })
+        .catch(err => {
+          self.message = 'Error registering new user:' + err
+        })
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-   @import '../sass/main.scss'
+   @import '../../sass/main.scss'
 </style>

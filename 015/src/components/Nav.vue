@@ -2,8 +2,8 @@
   <div class="nav-wrapper">
 
     <ul class="nav">
-      <li v-for="item in routes">
-          <router-link :to="item.path">{{item.name}}</router-link>
+      <li v-for="item in routes" :class="item.meta">
+          <router-link :to="item.path" >{{item.name}}</router-link>
       </li>
   </ul>
   </div>
