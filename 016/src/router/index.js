@@ -4,7 +4,9 @@ import Add from '@/components/Add'
 import List from '@/components/List'
 import Register from '@/components/user/Register'
 import Login from '@/components/user/Login'
-import Email from '@/components/user/Confirm'
+import Confirm from '@/components/user/Confirm'
+import Password from '@/components/user/Password'
+import Reset from '@/components/user/Reset'
 
 Vue.use(Router)
 
@@ -38,8 +40,20 @@ export const routesArray = {
     {
       path: '/confirm',
       name: 'Confirm Email',
-      component: Email,
+      component: Confirm,
       meta: 'inactive'
+    },
+    {
+      path: '/reset',
+      name: 'Reset',
+      component: Reset,
+      meta: 'inactive'
+    },
+    {
+      path: '/user/password',
+      name: 'Reset Password',
+      component: Password,
+      meta: 'active'
     }
   ]
 }

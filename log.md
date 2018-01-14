@@ -192,3 +192,10 @@ Twitter: 1477 followers +1
 * https://stackoverflow.com/questions/35914069/vue-js-query-parameters
 * https://router.vuejs.org/en/essentials/history-mode.html
 * https://router.vuejs.org/en/api/options.html
+
+### Day 015: January 14
+**Today's Progress**: Setup Password Reset Views
+
+**Thoughts:** I setup the Password Reset views, I just can't figure out where the users are being setup and saved in. I logged into the Admin and can see the requests coming in. My app is telling me I'm logged in, but I dont see any users being created in the app. Maybe it's because I'm not in production? I cant figure it out.
+
+Twitter: 1483 followers +6 followers since yesterday!
