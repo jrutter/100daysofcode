@@ -21,7 +21,7 @@ export const routesArray = {
     },
     {
       path: '/log',
-      name: 'Stash Log',
+      name: 'Log',
       component: List,
       meta: 'active'
     },
@@ -53,7 +53,7 @@ export const routesArray = {
       path: '/user/password',
       name: 'Reset Password',
       component: Password,
-      meta: 'active'
+      meta: 'inactive'
     }
   ]
 }

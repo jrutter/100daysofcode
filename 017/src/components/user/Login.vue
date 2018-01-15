@@ -27,7 +27,7 @@
                 <input type="submit" value="Log in" id="form_button" v-on:click="login(event)"/>
               </div>
 
-
+              <a href="/user/password">Reset Password</a>
 
           </div>
       </div>
@@ -58,8 +58,8 @@ export default {
 
       stitchClient.login(self.email, self.password)
       .then(userId => {
-        self.message = 'Successfully logged in as user'
-        console.log('Successfully logged in as user', userId)
+        self.message = 'Successfully logged in as user' + userId
+        this.$router.push('/log')
       })
       .catch(err => {
         self.message = 'Error logging in with email/password auth'

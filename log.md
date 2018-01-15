@@ -199,3 +199,10 @@ Twitter: 1477 followers +1
 **Thoughts:** I setup the Password Reset views, I just can't figure out where the users are being setup and saved in. I logged into the Admin and can see the requests coming in. My app is telling me I'm logged in, but I dont see any users being created in the app. Maybe it's because I'm not in production? I cant figure it out.
 
 Twitter: 1483 followers +6 followers since yesterday!
+
+### Day 016: January 15
+**Today's Progress**: Working on user session mgmt
+
+**Thoughts:** I got up early today, it was tough to get out of bed. My back is hurting from Sunday, but I could feel a migraine coming on so I took something. I worked for a bit today on the authentication. I'm not sure if I'm a fan of how Stitch does it. It seems easy, but some things aren't very clear. I'm not sure if I should keep going or stop here and switch to something else. Their documentation is simple, but I'm stuck at one part.
+
+Twitter: 1481 followers.

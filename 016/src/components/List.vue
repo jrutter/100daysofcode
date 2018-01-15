@@ -42,18 +42,22 @@ export default {
   },
   mounted: function () {
     this.loadItems()
+    console.log('logged in as: ' + stitchClient.authedId())
   },
   methods: {
     loadItems: function () {
       var self = this
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
+      // stitchClient.login().then(displayEntries);
 
       stitchClient.login()
       .then(() => console.log('logged in as: ' + stitchClient.authedId()))
       .catch(e => console.log('error: ', e))
-
-      let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
+      // let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
+    },
+    displayEntries: function () {
+      const db = client.service('mongodb', 'mongodb-atlas').db('StatusStash');
       let items = db.collection('standup')
       items.find({ email: 'jake@onerutter.com' }).execute().then(function (data) {
         console.log('data', data)
