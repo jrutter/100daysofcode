@@ -206,3 +206,12 @@ Twitter: 1483 followers +6 followers since yesterday!
 **Thoughts:** I got up early today, it was tough to get out of bed. My back is hurting from Sunday, but I could feel a migraine coming on so I took something. I worked for a bit today on the authentication. I'm not sure if I'm a fan of how Stitch does it. It seems easy, but some things aren't very clear. I'm not sure if I should keep going or stop here and switch to something else. Their documentation is simple, but I'm stuck at one part.
 
 Twitter: 1481 followers.
+
+### Day 017: January 16
+**Today's Progress**: Pivot to using a different mongodb - mLab
+
+**Thoughts:** I missed getting up early today, so doing some coding at night after running at the gym. My back is finally improving, so back at it. Going to explore using mLab over Stitch. I don't love stitch and want to learn to integrate with the heroku ecosystem. Exploring using mLab over Stitch.
+
+Twitter: 1481 followers.
+
+* http://docs.mlab.com/data-api/

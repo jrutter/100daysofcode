@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { StitchClient } from 'mongodb-stitch'
+import axios from 'axios'
 import NavBar from '@/components/Nav'
 export default {
   name: 'List',
@@ -46,19 +46,18 @@ export default {
   methods: {
     loadItems: function () {
       var self = this
-      let appId = 'statusstash-dnwjj'
-      let stitchClient = new StitchClient(appId)
+      var apiKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
+      this.items = []
 
-      stitchClient.login()
-      .then(() => console.log('logged in as: ' + stitchClient.authedId()))
-      .catch(e => console.log('error: ', e))
-
-      let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
-      let items = db.collection('standup')
-      items.find({ email: 'jake@onerutter.com' }).execute().then(function (data) {
-        console.log('data', data)
-        self.entries = data
-      })
+      axios.get('https://api.mlab.com/api/1/databases/standup/collections/stash?apiKey=' + apiKey,
+        {
+          // headers: { Authorization: 'Bearer ' + appKey }
+        }).then(function (response) {
+          console.log('response',response)
+          self.entries = response.data
+        }).catch(function (error) {
+          console.log(error)
+        })
     }
   }
 }

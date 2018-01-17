@@ -49,11 +49,12 @@ export default {
       var self = this
       let appId = 'statusstash-dnwjj'
       let stitchClient = new StitchClient(appId)
-      // stitchClient.login().then(displayEntries);
+      stitchClient.login().then(displayEntries);
+      displayEntries()
 
-      stitchClient.login()
-      .then(() => console.log('logged in as: ' + stitchClient.authedId()))
-      .catch(e => console.log('error: ', e))
+      // stitchClient.login()
+      // .then(() => console.log('logged in as: ' + stitchClient.authedId()))
+      // .catch(e => console.log('error: ', e))
       // let db = stitchClient.service('mongodb', 'mongodb-atlas').db('StatusStash')
     },
     displayEntries: function () {
