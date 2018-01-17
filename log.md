@@ -210,8 +210,8 @@ Twitter: 1481 followers.
 ### Day 017: January 16
 **Today's Progress**: Pivot to using a different mongodb - mLab
 
-**Thoughts:** I missed getting up early today, so doing some coding at night after running at the gym. My back is finally improving, so back at it. Going to explore using mLab over Stitch. I don't love stitch and want to learn to integrate with the heroku ecosystem. Exploring using mLab over Stitch.
+**Thoughts:** I missed getting up early today, so doing some coding at night after running at the gym. My back is finally improving, so back at it. Going to explore using mLab over Stitch. I don't love stitch and want to learn to integrate with the heroku ecosystem. Exploring using mLab over Stitch, got a basic collection up and running using the Data API. Going to move forward with using this over Stitch.
 
-Twitter: 1481 followers.
+Twitter: 1487 followers - moving up!
 
 * http://docs.mlab.com/data-api/
