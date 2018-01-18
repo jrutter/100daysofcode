@@ -20,7 +20,7 @@ export default class AuthService {
     audience: 'https://onerutter.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'
- })
+  })
 
   login () {
     this.auth0.authorize()
@@ -48,6 +48,7 @@ export default class AuthService {
     localStorage.setItem('id_token', authResult.idToken)
     localStorage.setItem('expires_at', expiresAt)
     this.authNotifier.emit('authChange', { authenticated: true })
+    this.getProfile()
   }
 
   logout () {
@@ -66,5 +67,25 @@ export default class AuthService {
     // access token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
     return new Date().getTime() < expiresAt
+  }
+
+  getProfile () {
+    if (!this.userProfile) {
+      var accessToken = localStorage.getItem('access_token')
+
+      if (!accessToken) {
+        console.log('Access token must exist to fetch profile')
+      }
+
+      this.auth0.client.userInfo(accessToken, function (err, profile) {
+        if (profile) {
+          // let this.userProfile = profile;
+          // localStorage.setItem('userProfile', profile)
+          console.log('profile', profile)
+        }
+      })
+    } else {
+
+    }
   }
 }

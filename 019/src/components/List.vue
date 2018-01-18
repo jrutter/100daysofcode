@@ -6,29 +6,25 @@
 
 <nav-bar></nav-bar>
 
-      <div class="container">
-          <div id="content">
-              <h1>Status Log</h1>
-
-              <h4 v-if="authenticated">
-                  You are logged in!
-              </h4>
-              <h4 v-if="!authenticated">
-                You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
-              </h4>
-
-              <ul>
-                <li v-for="item in entries">
-                    <h3>{{item.email}}</h3>
-                    <p><i class="fas fa-calendar-plus"></i> Today: {{item.today}}</p>
-                    <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday}}</p>
-                    <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
-                </li>
-            </ul>
-
-
-          </div>
+  <div class="container">
+    <div id="content">
+      <h1>Status Log</h1>
+      <div v-if="!authenticated">
+        You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
       </div>
+
+      <div v-if="authenticated">
+        <ul>
+            <li v-for="item in entries">
+                <h3>{{item.email}}</h3>
+                <p><i class="fas fa-calendar-plus"></i> Today: {{item.today}}</p>
+                <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday}}</p>
+                <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </div>
 </template>

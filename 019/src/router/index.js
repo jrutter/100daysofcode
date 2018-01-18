@@ -2,12 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Add from '@/components/Add'
 import List from '@/components/List'
-import Register from '@/components/user/Register'
-import Login from '@/components/user/Login'
-import Confirm from '@/components/user/Confirm'
-import Password from '@/components/user/Password'
-import Reset from '@/components/user/Reset'
 import Callback from '@/components/Callback'
+import Home from '@/components/Home'
+import Profile from '@/components/Profile'
 
 Vue.use(Router)
 
@@ -16,6 +13,12 @@ export const routesArray = {
   routes: [
     {
       path: '/',
+      name: 'Home',
+      component: Home,
+      meta: 'active'
+    },
+    {
+      path: '/add',
       name: 'Add Stash',
       component: Add,
       meta: 'active'
@@ -27,44 +30,20 @@ export const routesArray = {
       meta: 'active'
     },
     {
-      path: '/user/register',
-      name: 'Register',
-      component: Register,
-      meta: 'active'
-    },
-    {
-      path: '/user/login',
-      name: 'Log in',
-      component: Login,
-      meta: 'active'
-    },
-    {
-      path: '/confirm',
-      name: 'Confirm Email',
-      component: Confirm,
-      meta: 'inactive'
-    },
-    {
-      path: '/reset',
-      name: 'Reset',
-      component: Reset,
-      meta: 'inactive'
-    },
-    {
-      path: '/user/password',
-      name: 'Reset Password',
-      component: Password,
-      meta: 'inactive'
-    },
-    {
       path: '/callback',
       name: 'Callback',
       component: Callback,
       meta: 'inactive'
     },
     {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
+      meta: 'inactive'
+    },
+    {
       path: '*',
-      redirect: '/log'
+      redirect: '/'
     }
   ]
 }

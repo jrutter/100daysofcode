@@ -12,6 +12,14 @@
           <div id="content">
               <h1>What's your current status?</h1>
 
+
+              <div v-if="!authenticated">
+                You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
+              </div>
+
+              <div v-if="authenticated">
+                <a @click="auth.logout()">Log out</a>
+
                 <div class="name">
                   <label for="name_input"></label>
                   <input type="text" placeholder="My name is" v-model="name" id="name_input">
@@ -36,6 +44,8 @@
                 <div class="submit">
                   <input type="submit" value="Save Status" id="form_button" v-on:click="saveStatus(event)"/>
                 </div>
+              </div>
+
 
           </div>
       </div>
@@ -50,6 +60,7 @@ import NavBar from '@/components/Nav'
 
 export default {
   name: 'Add',
+  props: ['auth', 'authenticated'],
   components: {
     NavBar
   },

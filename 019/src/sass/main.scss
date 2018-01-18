@@ -24,10 +24,6 @@ body {
 }
 
 a {
-    text-decoration:none;
-    color:red;
-    font-size:1.8em;
-    font-weight:700;
 }
 img {
     width:150px;
@@ -41,6 +37,8 @@ header {
 
     a {
       color:#333;
+      text-decoration: none;
+      font-size: 1.8em;
     }
 
 }
@@ -50,6 +48,10 @@ header {
   grid-template-columns: 100% auto;
   grid-area: body;
   border: 1px solid #333;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 footer {
@@ -61,7 +63,7 @@ ul {
     display:grid;
     list-style-type:none;
     margin:0;padding:0;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(1, auto);
 }
 ul li {
