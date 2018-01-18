@@ -216,7 +216,7 @@ Twitter: 1487 followers - moving up!
 
 * http://docs.mlab.com/data-api/
 
-### Day 017: January 16
+### Day 018: January 17
 **Today's Progress**: Got Auth0 basic authentication service up and running
 
 **Thoughts:** Doing after work coding again, spent a solid hour today - but could spend all night. Made great progress on getting Auth0 setup and running. It's very slick, much better than the Stitch app I was looking at. Tomorrow going to get up early and do more with this! Excited!
