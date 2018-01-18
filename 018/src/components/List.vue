@@ -10,6 +10,13 @@
           <div id="content">
               <h1>Status Log</h1>
 
+              <h4 v-if="authenticated">
+                  You are logged in!
+              </h4>
+              <h4 v-if="!authenticated">
+                You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
+              </h4>
+
               <ul>
                 <li v-for="item in entries">
                     <h3>{{item.email}}</h3>
@@ -31,6 +38,7 @@ import axios from 'axios'
 import NavBar from '@/components/Nav'
 export default {
   name: 'List',
+  props: ['auth', 'authenticated'],
   components: {
     NavBar
   },
@@ -53,7 +61,7 @@ export default {
         {
           // headers: { Authorization: 'Bearer ' + appKey }
         }).then(function (response) {
-          console.log('response',response)
+          console.log('response', response)
           self.entries = response.data
         }).catch(function (error) {
           console.log(error)

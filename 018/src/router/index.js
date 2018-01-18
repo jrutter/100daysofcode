@@ -7,6 +7,7 @@ import Login from '@/components/user/Login'
 import Confirm from '@/components/user/Confirm'
 import Password from '@/components/user/Password'
 import Reset from '@/components/user/Reset'
+import Callback from '@/components/Callback'
 
 Vue.use(Router)
 
@@ -54,6 +55,16 @@ export const routesArray = {
       name: 'Reset Password',
       component: Password,
       meta: 'inactive'
+    },
+    {
+      path: '/callback',
+      name: 'Callback',
+      component: Callback,
+      meta: 'inactive'
+    },
+    {
+      path: '*',
+      redirect: '/log'
     }
   ]
 }
