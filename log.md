@@ -242,9 +242,9 @@ Twitter: 1494 followers... almost at 1500!
 ### Day 020: January 19
 **Today's Progress**: Continued work on Auth0 integration
 
-**Thoughts:** Up early today, I started work on the user profile using the Auth0 integration. I really like this service, the docs are amazing. I just need to get my head wrapped around it. I setup the authenticated routes, etc. I used some code samples from Auth0, which helped too.
+**Thoughts:** Up early today, I finished off the User Profile and was able to get the add view all setup with the user going into the database. This is awesome progress. I need to slap an actual UI on this and then can maybe get it up on a domain as an early beta.
 
-Twitter: 1494 followers... almost at 1500!
+Twitter: 1499 followers... almost at 1500!
 
 * https://manage.auth0.com/#/clients/tP81ULArF3ft31S3tYEJQvbOodIggGz9/quickstart
 * https://auth0.com/docs/api/authentication?javascript#get-user-info
