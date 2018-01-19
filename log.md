@@ -238,3 +238,15 @@ Twitter: 1494 followers... almost at 1500!
 * https://auth0.com/docs/api/authentication?javascript#get-user-info
 * https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-User-Profile
 * https://community.auth0.com/questions/11957/authentication-api-userinfo-missing-the-user-id
+
+### Day 020: January 19
+**Today's Progress**: Continued work on Auth0 integration
+
+**Thoughts:** Up early today, I started work on the user profile using the Auth0 integration. I really like this service, the docs are amazing. I just need to get my head wrapped around it. I setup the authenticated routes, etc. I used some code samples from Auth0, which helped too.
+
+Twitter: 1494 followers... almost at 1500!
+
+* https://manage.auth0.com/#/clients/tP81ULArF3ft31S3tYEJQvbOodIggGz9/quickstart
+* https://auth0.com/docs/api/authentication?javascript#get-user-info
+* https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-User-Profile
+* https://community.auth0.com/questions/11957/authentication-api-userinfo-missing-the-user-id

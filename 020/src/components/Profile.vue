@@ -12,6 +12,8 @@
               <h1>User Profile</h1>
 
               <div v-if="authenticated">
+                <p>Email: {{profile.name}}</p>
+                <img :src="profile.picture"/>
 
               </div>
               <div v-if="!authenticated">
@@ -35,10 +37,19 @@ export default {
   },
   data () {
     return {
-      items: []
+      items: [],
+      profile: ''
     }
   },
+  mounted: function () {
+    this.loadProfile()
+  },
   methods: {
+    loadProfile: function () {
+      let getProfile = localStorage.getItem('userProfile')
+      this.profile = JSON.parse(getProfile);
+      console.log('retrievedObject: ',this.profile)
+    }
   }
 }
 </script>

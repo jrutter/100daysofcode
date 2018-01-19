@@ -19,7 +19,7 @@ export default class AuthService {
     redirectUri: 'http://localhost:8080/callback',
     audience: 'https://onerutter.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
   })
 
   login () {
@@ -30,6 +30,7 @@ export default class AuthService {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
+        this.getProfile(authResult)
         router.replace('home')
       } else if (err) {
         router.replace('home')
@@ -48,7 +49,7 @@ export default class AuthService {
     localStorage.setItem('id_token', authResult.idToken)
     localStorage.setItem('expires_at', expiresAt)
     this.authNotifier.emit('authChange', { authenticated: true })
-    this.getProfile()
+
   }
 
   logout () {
@@ -69,9 +70,9 @@ export default class AuthService {
     return new Date().getTime() < expiresAt
   }
 
-  getProfile () {
-    if (!this.userProfile) {
-      var accessToken = localStorage.getItem('access_token')
+  getProfile (authResult) {
+    // if (!this.userProfile) {
+      let accessToken = authResult.accessToken
 
       if (!accessToken) {
         console.log('Access token must exist to fetch profile')
@@ -80,12 +81,15 @@ export default class AuthService {
       this.auth0.client.userInfo(accessToken, function (err, profile) {
         if (profile) {
           // let this.userProfile = profile;
-          // localStorage.setItem('userProfile', profile)
+          localStorage.setItem('userProfile', JSON.stringify(profile))
           console.log('profile', profile)
         }
+        else {
+          console.log('err', err)
+        }
       })
-    } else {
-
-    }
+    // } else {
+    //
+    // }
   }
 }

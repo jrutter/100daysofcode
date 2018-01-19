@@ -21,12 +21,11 @@
                 <a @click="auth.logout()">Log out</a>
 
                 <div class="name">
-                  <label for="name_input"></label>
-                  <input type="text" placeholder="My name is" v-model="name" id="name_input">
+                  <input type="text" v-model="name">
+
                 </div>
                 <div class="email">
-                  <label for="email"></label>
-                  <input type="email" placeholder="My e-mail is" v-model="email" id="email_input" required>
+                  <input type="text" v-model="email">
                 </div>
 
                 <div class="message">
@@ -72,10 +71,22 @@ export default {
       email: '',
       blocker: '',
       today: '',
-      yesterday: ''
+      yesterday: '',
+      profile: ''
     }
   },
+  mounted: function () {
+    this.loadProfile()
+  },
   methods: {
+    loadProfile: function () {
+      let getProfile = localStorage.getItem('userProfile')
+      let profileObj = JSON.parse(getProfile);
+      this.profile = profileObj;
+      this.email = profileObj.name;
+      this.name = profileObj.nickname;
+      console.log('retrievedObject: ',this.profile)
+    },
     saveStatus: function () {
       var self = this
       var apiKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
@@ -88,8 +99,8 @@ export default {
           yesterday: self.yesterday,
           blocker: self.blocker
         }).then(function (response) {
-          console.log('response', response)
           self.entries = response.data
+          self.$router.push('/log')
         }).catch(function (error) {
           console.log(error)
         })

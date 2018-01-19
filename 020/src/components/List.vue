@@ -6,25 +6,22 @@
 
 <nav-bar></nav-bar>
 
-  <div class="container">
-    <div id="content">
-      <h1>Status Log</h1>
-      <div v-if="!authenticated">
-        You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
-      </div>
+      <div class="container">
+          <div id="content">
+              <h1>Status Log</h1>
 
-      <div v-if="authenticated">
-        <ul>
-            <li v-for="item in entries">
-                <h3>{{item.email}}</h3>
-                <p><i class="fas fa-calendar-plus"></i> Today: {{item.today}}</p>
-                <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday}}</p>
-                <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
-            </li>
-        </ul>
+              <ul>
+                <li v-for="item in entries">
+                    <h3>{{item.email}}</h3>
+                    <p><i class="fas fa-calendar-plus"></i> Today: {{item.today}}</p>
+                    <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday}}</p>
+                    <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
+                </li>
+            </ul>
+
+
+          </div>
       </div>
-    </div>
-  </div>
 
 </div>
 </template>
@@ -34,14 +31,14 @@ import axios from 'axios'
 import NavBar from '@/components/Nav'
 export default {
   name: 'List',
-  props: ['auth', 'authenticated'],
   components: {
     NavBar
   },
   data () {
     return {
       entries: [],
-      searchResults: ''
+      searchResults: '',
+      profile: ''
     }
   },
   mounted: function () {
@@ -49,15 +46,21 @@ export default {
   },
   methods: {
     loadItems: function () {
-      var self = this
-      var apiKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
+      let self = this
+      let getProfile = localStorage.getItem('userProfile')
+      this.profile = JSON.parse(getProfile);
+      let labKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
       this.items = []
+      let query = '{"email":'+this.profile.name+'}'
 
-      axios.get('https://api.mlab.com/api/1/databases/standup/collections/stash?apiKey=' + apiKey,
+      axios.get('https://api.mlab.com/api/1/databases/standup/collections/stash',
         {
-          // headers: { Authorization: 'Bearer ' + appKey }
+          params: {
+            apiKey: labKey,
+            q: {"email": this.profile.name}
+          }
         }).then(function (response) {
-          console.log('response', response)
+          console.log('response',response)
           self.entries = response.data
         }).catch(function (error) {
           console.log(error)

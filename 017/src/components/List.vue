@@ -37,7 +37,8 @@ export default {
   data () {
     return {
       entries: [],
-      searchResults: ''
+      searchResults: '',
+      profile: ''
     }
   },
   mounted: function () {
@@ -45,11 +46,14 @@ export default {
   },
   methods: {
     loadItems: function () {
-      var self = this
-      var apiKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
+      let self = this
+      let getProfile = localStorage.getItem('userProfile')
+      this.profile = JSON.parse(getProfile);
+      let apiKey = 'lAsBHd1474tcG5UNO_KlBFCb5nUWEtt-'
       this.items = []
+      let query = '{"email":'+ profile.nickname +'}'
 
-      axios.get('https://api.mlab.com/api/1/databases/standup/collections/stash?apiKey=' + apiKey,
+      axios.get('https://api.mlab.com/api/1/databases/standup/collections/stash?apiKey=' + apiKey + '&q=' + query,
         {
           // headers: { Authorization: 'Bearer ' + appKey }
         }).then(function (response) {
