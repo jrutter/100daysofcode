@@ -250,3 +250,14 @@ Twitter: 1499 followers... almost at 1500!
 * https://auth0.com/docs/api/authentication?javascript#get-user-info
 * https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-User-Profile
 * https://community.auth0.com/questions/11957/authentication-api-userinfo-missing-the-user-id
+
+### Day 020: January 19
+**Today's Progress**: Did a slight pivot and was going to rebuild this in React, so I did some basic setup in reactjs.
+
+**Thoughts:** Saturday. So I spent sometime messing around with react. I think I will continue with VueJS for now. At the end of where I have gotten with this, I will then attempt a rewrite of this in react if necessary. So far they are pretty similar. The whole point of this was to learn something new, so I'm going to stay on that track.
+
+Twitter: 1506 followers
+
+* https://vuejs.org/v2/guide/comparison.html
+* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+* https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel
