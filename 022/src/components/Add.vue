@@ -21,11 +21,10 @@
                 <a @click="auth.logout()">Log out</a>
 
                 <div class="name">
-                  <input type="text" v-model="name">
-
+                  <input type="hidden" v-model="name">
                 </div>
                 <div class="email">
-                  <input type="text" v-model="email">
+                  <input type="hidden" v-model="email">
                 </div>
 
                 <div class="message">
@@ -81,11 +80,10 @@ export default {
   methods: {
     loadProfile: function () {
       let getProfile = localStorage.getItem('userProfile')
-      let profileObj = JSON.parse(getProfile);
-      this.profile = profileObj;
-      this.email = profileObj.name;
-      this.name = profileObj.nickname;
-      console.log('retrievedObject: ',this.profile)
+      let profileObj = JSON.parse(getProfile)
+      this.profile = profileObj
+      this.email = profileObj.name
+      this.name = profileObj.nickname
     },
     saveStatus: function () {
       var self = this
@@ -97,7 +95,9 @@ export default {
           email: self.email,
           today: self.today,
           yesterday: self.yesterday,
-          blocker: self.blocker
+          blocker: self.blocker,
+          created_at: Date.now()
+
         }).then(function (response) {
           self.entries = response.data
           self.$router.push('/log')

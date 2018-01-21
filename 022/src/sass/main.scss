@@ -256,6 +256,14 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 // 	float: left;
 // 	width: 45%;
 // }
+.status-container {
+
+  border:1px solid #efefef;
+  width:400px;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
 
 select {
   background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;

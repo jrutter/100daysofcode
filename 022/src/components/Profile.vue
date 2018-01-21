@@ -47,8 +47,8 @@ export default {
   methods: {
     loadProfile: function () {
       let getProfile = localStorage.getItem('userProfile')
-      this.profile = JSON.parse(getProfile);
-      console.log('retrievedObject: ',this.profile)
+      this.profile = JSON.parse(getProfile)
+      console.log('retrievedObject: ', this.profile)
     }
   }
 }

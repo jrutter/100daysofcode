@@ -251,7 +251,7 @@ Twitter: 1499 followers... almost at 1500!
 * https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-User-Profile
 * https://community.auth0.com/questions/11957/authentication-api-userinfo-missing-the-user-id
 
-### Day 021: January 19
+### Day 021: January 20
 **Today's Progress**: Did a slight pivot and was going to rebuild this in React, so I did some basic setup in reactjs.
 
 **Thoughts:** Saturday. So I spent sometime messing around with react. I think I will continue with VueJS for now. At the end of where I have gotten with this, I will then attempt a rewrite of this in react if necessary. So far they are pretty similar. The whole point of this was to learn something new, so I'm going to stay on that track.
@@ -261,3 +261,13 @@ Twitter: 1506 followers
 * https://vuejs.org/v2/guide/comparison.html
 * https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 * https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel
+
+### Day 022: January 21
+**Today's Progress**: Setup date in add function and formatted using a Vuejs Filter
+
+**Thoughts:** Sunday. I added date to the add view in vuejs and setup a filter to format the date using momentjs. Next, Im going to work on putting a nice UI on the app. I've got the basics all working now. I need to start thinking about building out the app, getting a domain name, etc.
+
+Twitter: 1506 followers
+
+* https://vuejs.org/v2/guide/filters.html
+* https://forum.vuejs.org/t/how-to-format-date-for-display/3586/11
