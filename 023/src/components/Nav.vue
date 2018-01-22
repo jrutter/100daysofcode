@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-wrapper">
+  <div class="grid">
 
     <ul class="nav">
       <li v-for="item in routes" :class="item.meta">

@@ -2,25 +2,20 @@
 <div>
 
   <header>
-      <a href="#">Status Stash</a>
+      <div class="logo"><a href="#">Daily Stash</a></div>
+      <nav-bar></nav-bar>
   </header>
 
-  <nav-bar></nav-bar>
+
 
       <div class="container">
           <div id="content">
               <h1>Welcome to Status Stash</h1>
 
               <div v-if="authenticated">
-
-
-                  <p>You are logged in!, now you can.</p>
                   <div class="intro-grid">
                     <div>Add your status</div>
                     <div>See a list of past statuses</div>
-                    <a href="/profile">View my profile</a>
-                    <a @click="auth.logout()">Log out</a>
-
                   </div>
               </div>
               <div v-if="!authenticated">

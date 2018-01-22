@@ -271,3 +271,10 @@ Twitter: 1506 followers
 
 * https://vuejs.org/v2/guide/filters.html
 * https://forum.vuejs.org/t/how-to-format-date-for-display/3586/11
+
+### Day 023: January 22
+**Today's Progress**: Cleaned up the navigation and did some styling
+
+**Thoughts:** Monday morning. Up early, cleaned up the navigation on the app. It's in the most basic stages now. I need to do some planning over the next few days on what to do next to the app. I will try to get some of that thinking done over lunch today or after work if I can.
+
+Twitter: 1510 followers

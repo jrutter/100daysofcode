@@ -25,7 +25,7 @@ export const routesArray = {
     },
     {
       path: '/log',
-      name: 'Log',
+      name: 'My Stash',
       component: List,
       meta: 'active'
     },
@@ -37,9 +37,9 @@ export const routesArray = {
     },
     {
       path: '/profile',
-      name: 'Profile',
+      name: 'My Profile',
       component: Profile,
-      meta: 'inactive'
+      meta: 'active'
     },
     {
       path: '*',

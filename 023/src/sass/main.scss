@@ -29,16 +29,46 @@ img {
     width:150px;
 }
 header {
-    background:#efefef;
-    padding: 1em;
+    background:#333;
     grid-area: header;
     text-align:left;
     border: 1px solid #999;
 
+    display: grid;
+    margin:0;padding:0;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+
+    div.logo {
+      margin: 10px;
+    }
+
+
     a {
-      color:#333;
+      color:#fff;
       text-decoration: none;
       font-size: 1.8em;
+      padding: 10px;
+      margin: 10px;
+    }
+
+
+
+    ul.nav {
+
+      list-style-type:none;
+      text-align: right;
+
+
+      li {
+        display: inline-block;
+        margin:0 10px;
+
+        a {
+          color:#fff;
+        }
+
+      }
     }
 
 }
@@ -47,7 +77,6 @@ header {
   display:grid;
   grid-template-columns: 100% auto;
   grid-area: body;
-  border: 1px solid #333;
 
   a {
     text-decoration: underline;
@@ -59,22 +88,22 @@ footer {
     grid-area: footer;
 }
 
-ul {
-    display:grid;
-    list-style-type:none;
-    margin:0;padding:0;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(1, auto);
-}
-ul li {
-    padding: 1em;
-    color:#333;
-}
-ul li span {
-    display:block;
-    // font-size:.5em;
-    color: white;
-}
+// ul {
+//     display:grid;
+//     list-style-type:none;
+//     margin:0;padding:0;
+//     grid-template-columns: repeat(3, auto);
+//     grid-template-rows: repeat(1, auto);
+// }
+// ul li {
+//     padding: 1em;
+//     color:#333;
+// }
+// ul li span {
+//     display:block;
+//     // font-size:.5em;
+//     color: white;
+// }
 
 input#search {
   padding:10px 12px;

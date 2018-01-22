@@ -2,10 +2,9 @@
 <div>
 
   <header>
-      <a href="#">Status Stash</a>
+      <div class="logo"><a href="#">Daily Stash</a></div>
+      <nav-bar></nav-bar>
   </header>
-
-  <nav-bar></nav-bar>
 
 
       <div class="container">

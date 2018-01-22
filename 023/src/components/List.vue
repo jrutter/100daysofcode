@@ -1,14 +1,14 @@
 <template>
 <div>
-<header>
-    <a href="#">Status Stash</a>
-</header>
-
-<nav-bar></nav-bar>
+  <header>
+      <div class="logo"><a href="#">Daily Stash</a></div>
+      <nav-bar></nav-bar>
+  </header>
 
       <div class="container">
           <div id="content">
               <h1>Status Log</h1>
+
               <div v-for="item in entries" class="status-container">
                   {{item.name}}
                   <p><i class="fas fa-calendar-plus"></i> Today: {{item.today | capitalize }}</p>
