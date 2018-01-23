@@ -1,10 +1,13 @@
 <template>
 <div>
 
-  <header>
-      <div class="logo"><a href="#">Daily Stash</a></div>
-      <nav-bar></nav-bar>
-  </header>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Daily Stash</h5>
+      <nav-bar :auth="auth"
+      :authenticated="authenticated"></nav-bar>
+        <a class="btn btn-outline-primary" @click="auth.login()" v-if="!authenticated">Sign up</a>
+        <a class="btn btn-outline-primary" @click="auth.logout()" v-if="authenticated">Log-out</a>
+    </div>
 
       <div class="container">
           <div id="content">
@@ -18,7 +21,7 @@
                 <a @click="auth.logout()">Log out</a>
 
               </div>
-              <div v-if="!authenticated">
+              <div v-else-if="!authenticated">
                 You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
               </div>
 
@@ -26,6 +29,12 @@
 
           </div>
       </div>
+
+      <footer class="text-muted">
+      <div class="container">
+        <p>&copy; 2018 Daily Stash!</p>
+      </div>
+    </footer>
 
 </div>
 </template>

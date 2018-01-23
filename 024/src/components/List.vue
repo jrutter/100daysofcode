@@ -1,20 +1,42 @@
 <template>
 <div>
-  <header>
-      <div class="logo"><a href="#">Daily Stash</a></div>
-      <nav-bar></nav-bar>
-  </header>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Daily Stash</h5>
+      <nav-bar :auth="auth"
+      :authenticated="authenticated"></nav-bar>
+        <a class="btn btn-outline-primary" @click="auth.login()" v-if="!authenticated">Sign up</a>
+        <a class="btn btn-outline-primary" @click="auth.logout()" v-else-if="authenticated">Log-out</a>
+    </div>
 
       <div class="container">
           <div id="content">
               <h1>Status Log</h1>
 
-              <div v-for="item in entries" class="status-container">
-                  {{item.name}}
-                  <p><i class="fas fa-calendar-plus"></i> Today: {{item.today | capitalize }}</p>
-                  <p><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday | capitalize }}</p>
-                  <p><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</p>
-                  <p><i class="fas fa-clock"></i> Date: {{item.created_at | formatDate}}</p>
+              <div v-if="!authenticated">
+                You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
+              </div>
+
+              <div v-else-if="authenticated">
+                <div class="card-deck mb-3 text-center">
+                  <div v-for="item in entries" class="card mb-4 box-shadow">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">{{item.created_at | formatDate}}</h4>
+                    </div>
+
+                    <div class="card-body">
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li><i class="fas fa-calendar-plus"></i> Today: {{item.today | capitalize }}</li>
+                        <li><i class="fas fa-calendar-check"></i> Yesterday: {{item.yesterday | capitalize }}</li>
+                        <li><i class="fas fa-ban"></i> Blocker: {{item.blocker}}</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+
               </div>
             </div>
 
@@ -31,6 +53,7 @@ import NavBar from '@/components/Nav'
 import moment from 'moment'
 export default {
   name: 'List',
+  props: ['auth', 'authenticated'],
   components: {
     NavBar
   },

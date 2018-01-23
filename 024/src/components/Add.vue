@@ -1,10 +1,13 @@
 <template>
 <div>
 
-  <header>
-      <div class="logo"><a href="#">Daily Stash</a></div>
-      <nav-bar></nav-bar>
-  </header>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Daily Stash</h5>
+      <nav-bar :auth="auth"
+      :authenticated="authenticated"></nav-bar>
+        <a class="btn btn-outline-primary" @click="auth.login()" v-if="!authenticated">Sign up</a>
+        <a class="btn btn-outline-primary" @click="auth.logout()" v-else-if="authenticated">Log-out</a>
+    </div>
 
 
       <div class="container">
@@ -16,36 +19,92 @@
                 You are not logged in! Please <a @click="auth.login()">Log In</a> to continue.
               </div>
 
-              <div v-if="authenticated">
-                <a @click="auth.logout()">Log out</a>
+              <div v-else-if="authenticated">
 
-                <div class="name">
-                  <input type="hidden" v-model="name">
-                </div>
-                <div class="email">
-                  <input type="hidden" v-model="email">
-                </div>
 
-                <div class="message">
-                  <label for="today"></label>
-                  <textarea v-model="today" placeholder="What did you do yesterday?" id="today" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="message">
-                  <label for="yesterday"></label>
-                  <textarea v-model="yesterday" placeholder="What are you planning on doing today?" id="yesterday" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="message">
-                  <label for="blocker"></label>
-                  <textarea v-model="blocker" placeholder="Do you have any blockers?" id="blocker" cols="30" rows="5" ></textarea>
-                </div>
-                <div class="submit">
-                  <input type="submit" value="Save Status" id="form_button" v-on:click="saveStatus(event)"/>
-                </div>
+
+
+
+                <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Preview Status</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <small class="text-muted">{{yesterday}}</small>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <small class="text-muted">{{today}}</small>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <small class="text-muted">{{blocker}}</small>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="col-md-8 order-md-1">
+
+            <div class="name">
+              <input type="hidden" v-model="name">
+            </div>
+            <div class="email">
+              <input type="hidden" v-model="email">
+            </div>
+
+
+            <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Yesterday?</span>
+            </div>
+            <textarea class="form-control" v-model="yesterday" aria-label="With textarea"></textarea>
+          </div>
+
+          <br>
+
+          <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Today?</span>
+          </div>
+          <textarea class="form-control" v-model="today" aria-label="With textarea"></textarea>
+        </div>
+
+        <br>
+
+
+        <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Blockers?</span>
+        </div>
+        <textarea class="form-control" v-model="blocker" aria-label="With textarea"></textarea>
+      </div>
+
+
+
+
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" v-on:click="saveStatus(event)">Add Status</button>
+        </div>
+      </div>
               </div>
 
 
           </div>
       </div>
+
+      <footer class="text-muted">
+      <div class="container">
+        <p>&copy; 2018 Daily Stash!</p>
+      </div>
+    </footer>
 
 </div>
 </template>
