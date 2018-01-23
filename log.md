@@ -278,3 +278,12 @@ Twitter: 1506 followers
 **Thoughts:** Monday morning. Up early, cleaned up the navigation on the app. It's in the most basic stages now. I need to do some planning over the next few days on what to do next to the app. I will try to get some of that thinking done over lunch today or after work if I can.
 
 Twitter: 1510 followers
+
+### Day 024: January 23
+**Today's Progress**: Added Bootstrap for better styling
+
+**Thoughts:** Tuesday morning, 1 solid hour. I was able to setup Bootstrap 4 and added some much nicer styling to my app. I also setup a new nav and figured out how to pass props down to another component. I'm hoping by the end of the week, I can push this project up.
+
+Twitter: 1515 followers
+
+* https://getbootstrap.com/
