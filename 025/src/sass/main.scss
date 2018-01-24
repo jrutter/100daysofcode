@@ -1,0 +1,281 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@import "~bootstrap/scss/bootstrap";
+
+#app {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-align: center;
+  color: #2c3e50;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin:0;
+  color:white;
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 60% 40%;
+  grid-template-areas:
+  "header"
+  "body"
+}
+
+a {
+}
+img {
+    width:150px;
+}
+header {
+    background:#333;
+    grid-area: header;
+    text-align:left;
+    border: 1px solid #999;
+
+    display: grid;
+    margin:0;padding:0;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+
+    div.logo {
+      margin: 10px;
+    }
+
+
+    a {
+      color:#fff;
+      text-decoration: none;
+      font-size: 1.8em;
+      padding: 10px;
+      margin: 10px;
+    }
+
+
+
+    ul.nav {
+
+      list-style-type:none;
+      text-align: right;
+
+
+      li {
+        display: inline-block;
+        margin:0 10px;
+
+        a {
+          color:#fff;
+        }
+
+      }
+    }
+
+}
+
+// .container {
+//   display:grid;
+//   grid-template-columns: 100% auto;
+//   grid-area: body;
+//
+//   a {
+//     text-decoration: underline;
+//   }
+// }
+
+
+
+// ul {
+//     display:grid;
+//     list-style-type:none;
+//     margin:0;padding:0;
+//     grid-template-columns: repeat(3, auto);
+//     grid-template-rows: repeat(1, auto);
+// }
+// ul li {
+//     padding: 1em;
+//     color:#333;
+// }
+// ul li span {
+//     display:block;
+//     // font-size:.5em;
+//     color: white;
+// }
+
+
+
+
+
+#container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin: 10px auto;
+  position: relative;
+}
+
+
+h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.status-container {
+
+  border:1px solid #efefef;
+  width:400px;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .underline {
+    width: 68px;
+  }
+
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+
+  .underline {
+    width: 53px;
+  }
+
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+
+//
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
