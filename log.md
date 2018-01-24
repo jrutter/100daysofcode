@@ -287,3 +287,12 @@ Twitter: 1510 followers
 Twitter: 1515 followers
 
 * https://getbootstrap.com/
+
+### Day 025: January 24
+**Today's Progress**: Moved app to it's own repository and deployed to heroku
+
+**Thoughts:** Up early today, I moved the StandupStash app out of this repository and into it's own. I have set it up to deploy to Heroku and created a domain name for it. StandupStash.com.
+
+Twitter: 1516 followers
+
+* https://codeburst.io/quick-n-clean-way-to-deploy-vue-webpack-apps-on-heroku-b522d3904bc8
