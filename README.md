@@ -1,7 +1,7 @@
 # I've joined the #100DaysOfCode Challenge as of December 30, 2017
 
 ## Projects
-* Day001 - Current : Standup Stash App using Vue.js, MongoDB, CSS Grids
+* Day001 - Day 030 : StandupStash.com Web App using Vue.js, MongoDB, Bootstrap 4
 
 ## Contents
 * [Rules](rules.md)
