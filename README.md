@@ -1,7 +1,7 @@
 # I've joined the #100DaysOfCode Challenge as of December 30, 2017
 
 ## Projects
-* Day001 - Day 030 : StandupStash.com Web App using Vue.js, MongoDB, Bootstrap 4
+* Day001 - Current : StandupStash.com - At Day 25, moved to it's own repository. Just using this repo to update the log.
 
 ## Contents
 * [Rules](rules.md)

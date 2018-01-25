@@ -296,3 +296,10 @@ Twitter: 1515 followers
 Twitter: 1516 followers
 
 * https://codeburst.io/quick-n-clean-way-to-deploy-vue-webpack-apps-on-heroku-b522d3904bc8
+
+### Day 026: January 25
+**Today's Progress**: Added Features, Pricing Views and Configured the Domain
+
+**Thoughts:** Today, I added the features and pricing views with some basic content. I need to spend some time thinking out the next set of features that I'm going to add. I also was able to get the domain officially setup a heroku using PointDNS to manage the domain, which is a nice add-on for heroku.
+
+Twitter: 1522 followers
