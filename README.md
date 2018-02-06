@@ -1,7 +1,8 @@
 # I've joined the #100DaysOfCode Challenge as of December 30, 2017
 
 ## Projects
-* Day001 - Current : StandupStash.com - At Day 25, moved to it's own repository. Just using this repo to update the log.
+* Day001 - Day 038 : StandupStash.com - At Day 25, moved to it's own repository. Just using this repo to update the log. I need to take some courses before going any farther on this one.
+* Day 038 - Current : Taking a https://www.codecademy.com/ course on ExpressJS, will spin up a new repository for this coursework.
 
 ## Contents
 * [Rules](rules.md)
